@@ -1,0 +1,16 @@
+{
+  "name": "adygcode/simple-php-mvc-framework",
+  "description": "Simple PHP MVC framework: Demonstration of how to create a simple MVC framwork from scratch.",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "classmap": [
+      "app/"
+    ]
+  },
+  "require": {
+    "symfony/routing": "^6.2",
+    "symfony/http-foundation": "^6.2"
+  }
+}

@@ -1,0 +1,13 @@
+<IfModule mod_rewrite>
+RewriteEngine On
+
+# Stop processing if already in /public folder
+RewriteRule ^public/ - [L]
+
+# Static resources if they exist
+RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+RewriteRule (.+) public/$1 [L]
+
+# Route all other requests
+RewriteRule (.*) public/index.php?route=$1 [L,QSA]
+</IfModule>
